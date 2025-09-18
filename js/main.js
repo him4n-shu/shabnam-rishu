@@ -21,12 +21,8 @@ $(function(){
 			modalContent = `
 				<div class="gift-content video-message">
 					<h3>A Special Video Message</h3>
-					<div class="video-container">
-						<video id="birthdayVideoMessage" controls preload="metadata" style="width:100%;height:auto;">
-							<source src="video/video_message.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
+					<p style="margin-bottom:12px;">This video is hosted externally. Tap the button below to watch it.</p>
+					<p><a href="https://drive.google.com/file/d/12qBpKbC6C4CQ2iO4ufIXzH6YhQarlkuL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="the-heart-btn pink-btn">Open Video Message</a></p>
 				</div>
 			`;
 		} else if (giftType === 'special-promise') {
@@ -97,11 +93,6 @@ $(function(){
 				var bgAudio = document.getElementById('bgMusic');
 				if (bgAudio && !bgAudio.paused) {
 					bgAudio.pause();
-				}
-				// Auto-play the secret message video if available
-				var secretVideo = document.getElementById('secretMessageVideo');
-				if (secretVideo) {
-					try { secretVideo.play(); } catch(e) {}
 				}
 			});
 			$(this).text('Message Unlocked ❤️').prop('disabled', true);
