@@ -566,8 +566,14 @@ header.the-heart-menu-and-logo-section.sticky-menu .the-heart-main-meun{
 .the-heart-spilt-container {
   width: 100%;
 }
+.the-heart-intruduction-content-img { 
+  text-align: center;
+}
 .the-heart-intruduction-content-img img {
-  display: none;
+  display: block;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
 }
 .the-heart-single-introduction:nth-child(2n) .the-heart-intruduction-content-txt {
   text-align: center;
@@ -819,12 +825,16 @@ header.the-heart-menu-and-logo-section.sticky-menu .the-heart-main-meun{
     }
     
     .the-heart-welcome-content h4 {
-        font-size: 1.2em;
-        margin: 15px 0;
+        font-size: 1.1em;
+        margin: 10px 0 6px 0;
     }
     
     .the-heart-floral-txt h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
+    }
+
+    .the-heart-floral-txt {
+        margin-top: 6px;
     }
     
     /* Introduction Section */
@@ -1001,11 +1011,29 @@ header.the-heart-menu-and-logo-section.sticky-menu .the-heart-main-meun{
     }
     
     .the-heart-welcome-content h4 {
-        font-size: 1em;
+        font-size: 0.95em;
+        margin: 8px 0 4px 0;
     }
     
     .the-heart-floral-txt h3 {
-        font-size: 1.2em;
+        font-size: 1.0em;
+    }
+
+    /* Keep decorative floral lines; reposition to avoid overlap */
+    .the-heart-floral-txt {
+        position: relative;
+        margin-top: 6px;
+        padding: 18px 0; /* space for floral lines */
+    }
+    .the-heart-floral-txt:before {
+        display: block !important;
+        top: 0 !important;
+        bottom: auto !important;
+    }
+    .the-heart-floral-txt:after {
+        display: block !important;
+        top: auto !important;
+        bottom: 0 !important;
     }
     
     /* Gallery Section */
